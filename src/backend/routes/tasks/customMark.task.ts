@@ -12,7 +12,7 @@ export default {
     validators: [
         authorize,
         body('taskId').not().isEmpty(),
-        body('status').not().isEmpty(),
+        body('status').not().isEmpty().isString(),
     ],
 
     handler: async (req: RequestForUser, res: Response) =>

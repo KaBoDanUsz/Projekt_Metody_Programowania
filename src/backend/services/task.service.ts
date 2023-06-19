@@ -19,7 +19,7 @@ export type TaskData = {
 
 export const addTask = async ({
     title,
-    complete,
+    complete = false,
     description,
     deadLineDate,
 }: Pick<TaskData, 'title' | 'description' | 'complete' | 'deadLineDate'>) => {
